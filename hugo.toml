@@ -1,0 +1,6 @@
+title = "Hugo Tailwind starter"
+
+disableKinds = ["taxonomy", "term"]
+
+[params]
+pages = [['Home', ''], ['info', '#info']]

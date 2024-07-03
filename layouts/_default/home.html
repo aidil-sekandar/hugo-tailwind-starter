@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <section class="py-4">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold">{{ site.Title }}</h1>
+      <h2 class="text-xl">Very basic Hugo + Tailwind CSS starter theme</h2>
+    </div>
+  </section>
+
+  <section class="py-4" id="info">
+    <div class="info-section">
+      {{ .Content }}
+    </div>
+  </section>
+{{ end }}

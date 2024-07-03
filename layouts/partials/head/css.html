@@ -1,0 +1,3 @@
+{{- $styles := resources.Get "css/index.css" -}}
+{{- $styles = $styles | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />

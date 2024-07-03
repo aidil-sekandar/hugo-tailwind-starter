@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.128.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hugo Tailwind starter</title>
+<link rel="stylesheet" href="/css/index.min.e7de9843da480bda3d6bab93c602638a16c09d1d39f3ab40d671428427946749.css" />
+
+
+  </head>
+  <body class="container bg-bodyColor text-textPrimary">
+    <header>
+  <nav>
+    <div class="align-stretch mx-auto flex min-h-20 justify-between md:h-20">
+      <div id="logo" class="flex items-center font-bold text-blue-600">
+        <a
+          class="text-2xl transition duration-100 hover:-translate-y-1"
+          href="/"
+          >Hugo Tailwind starter</a
+        >
+      </div>
+      <ul
+        id="nav-links"
+        class="hamburger absolute right-4 top-16 hidden w-64 rounded-lg border-2 py-4 text-xl font-semibold shadow-xl md:static md:flex md:w-max md:items-center md:rounded-none md:border-none md:bg-transparent md:py-0 md:text-base md:shadow-none"
+      >
+        
+          <li>
+            <a
+              class="flex w-full py-3 pl-6 pr-4  hover:underline md:items-center md:rounded-lg md:py-2 md:pl-4"
+              href="/"
+              >Home</a
+            >
+          </li>
+        
+          <li>
+            <a
+              class="flex w-full py-3 pl-6 pr-4  hover:underline md:items-center md:rounded-lg md:py-2 md:pl-4"
+              href="/#info"
+              >info</a
+            >
+          </li>
+        
+
+      </ul>
+      <div class="flex items-center md:hidden">
+        <button
+          aria-label="hamburger-menu"
+          id="menu-button"
+          class="rounded-full p-1 focus:outline-none"
+        >
+          <svg
+            class="h-6 w-6 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              id="menu-icon"
+              d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  let menuOpen = false;
+  const menuButton = document.getElementById("menu-button");
+  const menuIcon = document.getElementById("menu-icon");
+  const navLinks = document.getElementById("nav-links");
+
+  function handleMenuButtonClick() {
+    if (menuOpen === false) {
+      navLinks?.classList.replace("hidden", "grid");
+      menuIcon?.setAttribute(
+        "d",
+        "M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z",
+      );
+      menuOpen = true;
+    } else {
+      navLinks?.classList.replace("grid", "hidden");
+      menuIcon?.setAttribute(
+        "d",
+        "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z",
+      );
+      menuOpen = false;
+    }
+  }
+  menuButton?.addEventListener("click", handleMenuButtonClick);
+</script>
+
+    
+  <section class="py-4">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold">Hugo Tailwind starter</h1>
+      <h2 class="text-xl">Very basic Hugo + Tailwind CSS starter theme</h2>
+    </div>
+  </section>
+
+  <section class="py-4" id="info">
+    <div class="info-section">
+      <!-- raw HTML omitted -->
+<blockquote>
+<p>This is a starter template for creating a custom Hugo theme. It comes pre-configured with Tailwind CSS, so you don’t have to set it up yourself. Ideal for developers building their own Hugo theme with Tailwind CSS.</p>
+</blockquote>
+<h2 id="features">Features</h2>
+<ul>
+<li>Tailwind CSS: Pre-installed and pre-configured.</li>
+<li>Prettier Plugin for Go Templates: Pre-installed and pre-configured.</li>
+<li>Prettier: Ensures better HTML formatting that follows Hugo’s standard format.</li>
+</ul>
+<h2 id="file-structure">File Structure</h2>
+<pre tabindex="0"><code>hugo-tailwind-starter
+|
+│    .gitignore
+│    .prettierrc
+│    go.mod
+│    hugo.toml
+│    LICENSE
+│    package-lock.json
+│    package.json
+|    postcss.config.js
+│    README.md
+|    tailwind.config.js
+|    theme.toml
+|    public/
+|
+├─── static
+|    └─── banner.png
+|
+├─── assets
+|    └─── css
+|         └─── index.css
+|         └─── main.css
+|
+├─── content
+|    └─── _index.md
+|
+├─── layouts
+|    ├─── 404.html
+|    └─── _default
+|         └─── baseof.html
+|         └─── home.html
+|    └─── partials
+|         ├─── footer.html
+|         ├─── head.html
+|         ├─── header.html
+|         └─── head
+|              └─── css.html
+</code></pre><h2 id="guideline-for-developers">Guideline for developers</h2>
+<h3 id="installation">Installation:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/aidil-sekandar/hugo-tailwind-starter.git
+</span></span></code></pre></div><h3 id="files-explanation">Files explanation:</h3>
+<ul>
+<li><code>theme.toml:</code> Contains essential information about the theme.</li>
+<li><code>tailwind.config.js:</code> Tailwind’s configuration file.</li>
+<li><code>postcss.config.js:</code> PostCSS’s configuration file.</li>
+<li><code>package.json:</code> List of necessary npm dependencies.</li>
+<li><code>.prettierrc:</code> Prettier’s configuration file.</li>
+<li><code>/assets/css/index.css:</code> Auto-generated CSS classes by Tailwind.</li>
+<li><code>/assets/css/main.css:</code> The theme’s main/global CSS file</li>
+</ul>
+<h3 id="getting-started-">Getting Started 🚀</h3>
+<ul>
+<li>Run <code>npm install</code> to install the necessary dependencies.</li>
+<li>Run <code>npm run dev</code> to start the development server</li>
+<li>Start working with Hugo and TailwindCSS 🎉</li>
+</ul>
+
+    </div>
+  </section>
+
+    <footer class="py-10">
+  <div>
+    <p class="text-center">
+      2024 &copy;
+      <a class="hover:underline" href="/">Hugo Tailwind starter</a>, All Rights
+      Reserved.
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

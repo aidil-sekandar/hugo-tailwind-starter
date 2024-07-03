@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply text-textPrimary;
+}
+
+.container {
+  @apply mx-auto max-w-[40rem] px-6;
+}
+
+.hamburger {
+  background: #1e1e2e;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.info-section > h2 {
+  @apply text-xl font-bold mb-3 mt-10;
+}
+
+code {
+  background-color: #1d1e22 !important;
+  color: white;
+  border-radius: 0.3rem;
+  padding:;
+  white-space: nowrap;
+}
+
+pre code {
+  white-space: inherit;
+}
+
+pre {
+  background-color: #1d1e22 !important;
+  border-radius: 0.3em;
+  padding: 1em;
+  overflow-x: scroll;
+}
+
+h3 {
+  @apply mt-4 mb-3 text-lg font-medium;
+}
+
+.info-section ul > li {
+  @apply list-disc ml-10;
+}
+
+blockquote {
+  @apply bg-gray-800 p-4 rounded-sm;
+}
